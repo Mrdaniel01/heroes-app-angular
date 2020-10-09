@@ -23,6 +23,7 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.term = params['term'];
       this.heroes = this.heroesService.searchHeroes(params['term']);
+      console.log( this.heroes );
     });
   }
 }
