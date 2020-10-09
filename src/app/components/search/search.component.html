@@ -9,13 +9,5 @@
 </div>
 
 <div class="card-columns">
-
-    <div class="card mt-4 animated fadeIn fast" *ngFor='let heroe of heroes; let i = index'>
-        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-        <div class="card-body">
-            <h5 class="card-title">{{heroe.nombre}}</h5>
-            <p class="card-text">T{{heroe.bio}}</p>
-            <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-        </div>
-    </div>
+    <app-hero-card [heroe]='heroe' [index]='i' *ngFor='let heroe of heroes; let i = index'></app-hero-card>
 </div>

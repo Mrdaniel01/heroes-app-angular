@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '../../services/heroes.service';
 
@@ -12,6 +12,9 @@ export class SearchComponent implements OnInit {
 
   heroes: any[] = [];
   term: string;
+
+  @Input() heroe: any = {};
+  @Input() index: number;
 
   constructor( private activatedRoute: ActivatedRoute, private heroesService: HeroesService ) { }
 
